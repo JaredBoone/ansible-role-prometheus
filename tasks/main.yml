@@ -1,4 +1,6 @@
 ---
+# tasks file for ansible-role-prometheus
+
   - name: prometheus | ensure prometheus group exists
     group: name=prometheus state=present
     tags: [prometheus]
@@ -26,6 +28,3 @@
   - name: prometheus | node_exporter
     import_tasks: node_exporter.yml
     tags: [prometheus, node_exporter]
-
-
-
